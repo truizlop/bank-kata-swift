@@ -10,4 +10,6 @@ import Foundation
 
 protocol Statement {
     func addLineWithTransaction(transaction : Transaction, withBalance balance : Double)
+    
+    func printTo(printer : Printer)
 }

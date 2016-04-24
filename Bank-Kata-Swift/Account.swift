@@ -31,6 +31,6 @@ class Account {
     }
     
     func printStatementTo(printer : Printer){
-        
+        statement.printTo(printer)
     }
 }

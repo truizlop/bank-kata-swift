@@ -13,15 +13,28 @@ class AccountTest : QuickSpec {
     
     class MockStatement : Statement {
         var lines : [(Transaction, Double)] = []
+        var printer : Printer?
         
         func addLineWithTransaction(transaction : Transaction, withBalance balance : Double){
             lines.append((transaction, balance))
+        }
+        
+        func printTo(printer: Printer) {
+            self.printer = printer
         }
         
         func verifyLineAddedWithTransaction(transaction : Transaction, withBalance balance : Double){
             let expectedLine = (transaction, balance)
             expect(self.lines).to(containsTuple(expectedLine))
         }
+        
+        func verifyPrintOnPrinter(printer : Printer){
+            expect(self.printer).to(beIdenticalTo(printer))
+        }
+    }
+    
+    class MockPrinter : Printer {
+        func println(line: String) {}
     }
     
     override func spec(){
@@ -60,6 +73,14 @@ class AccountTest : QuickSpec {
                 
                 statement.verifyLineAddedWithTransaction(expectedDeposit, withBalance: 500)
                 statement.verifyLineAddedWithTransaction(expectedWithdrawal, withBalance: 200)
+            }
+            
+            it("should print the account statement"){
+                let printer = MockPrinter()
+                
+                account.printStatementTo(printer)
+                
+                statement.verifyPrintOnPrinter(printer)
             }
         }
     }

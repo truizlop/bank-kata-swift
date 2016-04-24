@@ -12,4 +12,8 @@ class DefaultStatement : Statement {
     func addLineWithTransaction(transaction : Transaction, withBalance balance : Double){
         
     }
+    
+    func printTo(printer: Printer) {
+        
+    }
 }

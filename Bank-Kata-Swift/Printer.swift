@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol Printer {
+protocol Printer : class {
     func println(line : String)
 }
