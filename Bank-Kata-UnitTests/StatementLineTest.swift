@@ -27,6 +27,13 @@ class StatementLineTest : QuickSpec {
                 printer.verifyPrintedLinesInOrder("01/01/2001 | 300.00 | - | 300.00")
             }
             
+            it("shoud print a withdrawal amount"){
+                let statementLine = StatementLine(withTransaction: Transaction(withAmount: -300, onDate: "01/01/2001"), withBalance: -300)
+                
+                statementLine.printTo(printer)
+                
+                printer.verifyPrintedLinesInOrder("01/01/2001 | - | 300.00 | -300.00")
+            }
         }
     }
 }
