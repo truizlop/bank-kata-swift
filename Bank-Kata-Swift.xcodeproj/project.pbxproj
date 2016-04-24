@@ -25,10 +25,19 @@
 /* Begin PBXFileReference section */
 		11040F891CCCD99C00D3A9DF /* Bank-Kata-Swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Bank-Kata-Swift"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11040F8C1CCCD99C00D3A9DF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		11040F971CCCD9AB00D3A9DF /* Bank-Kata-UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bank-Kata-UnitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11040F9B1CCCD9AB00D3A9DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		11040F861CCCD99C00D3A9DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11040F941CCCD9AB00D3A9DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				11040F8B1CCCD99C00D3A9DF /* Bank-Kata-Swift */,
+				11040F981CCCD9AB00D3A9DF /* Bank-Kata-UnitTests */,
 				11040F8A1CCCD99C00D3A9DF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				11040F891CCCD99C00D3A9DF /* Bank-Kata-Swift */,
+				11040F971CCCD9AB00D3A9DF /* Bank-Kata-UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +71,14 @@
 				11040F8C1CCCD99C00D3A9DF /* main.swift */,
 			);
 			path = "Bank-Kata-Swift";
+			sourceTree = "<group>";
+		};
+		11040F981CCCD9AB00D3A9DF /* Bank-Kata-UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				11040F9B1CCCD9AB00D3A9DF /* Info.plist */,
+			);
+			path = "Bank-Kata-UnitTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +101,23 @@
 			productReference = 11040F891CCCD99C00D3A9DF /* Bank-Kata-Swift */;
 			productType = "com.apple.product-type.tool";
 		};
+		11040F961CCCD9AB00D3A9DF /* Bank-Kata-UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11040F9C1CCCD9AB00D3A9DF /* Build configuration list for PBXNativeTarget "Bank-Kata-UnitTests" */;
+			buildPhases = (
+				11040F931CCCD9AB00D3A9DF /* Sources */,
+				11040F941CCCD9AB00D3A9DF /* Frameworks */,
+				11040F951CCCD9AB00D3A9DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bank-Kata-UnitTests";
+			productName = "Bank-Kata-UnitTests";
+			productReference = 11040F971CCCD9AB00D3A9DF /* Bank-Kata-UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +129,9 @@
 				ORGANIZATIONNAME = "Tomás Ruiz López";
 				TargetAttributes = {
 					11040F881CCCD99C00D3A9DF = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					11040F961CCCD9AB00D3A9DF = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
@@ -110,9 +149,20 @@
 			projectRoot = "";
 			targets = (
 				11040F881CCCD99C00D3A9DF /* Bank-Kata-Swift */,
+				11040F961CCCD9AB00D3A9DF /* Bank-Kata-UnitTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11040F951CCCD9AB00D3A9DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		11040F851CCCD99C00D3A9DF /* Sources */ = {
@@ -120,6 +170,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				11040F8D1CCCD99C00D3A9DF /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11040F931CCCD9AB00D3A9DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +279,28 @@
 			};
 			name = Release;
 		};
+		11040F9D1CCCD9AB00D3A9DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Bank-Kata-UnitTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.truizlop.Bank-Kata-UnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		11040F9E1CCCD9AB00D3A9DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Bank-Kata-UnitTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.truizlop.Bank-Kata-UnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -239,6 +318,14 @@
 			buildConfigurations = (
 				11040F911CCCD99C00D3A9DF /* Debug */,
 				11040F921CCCD99C00D3A9DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		11040F9C1CCCD9AB00D3A9DF /* Build configuration list for PBXNativeTarget "Bank-Kata-UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11040F9D1CCCD9AB00D3A9DF /* Debug */,
+				11040F9E1CCCD9AB00D3A9DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
