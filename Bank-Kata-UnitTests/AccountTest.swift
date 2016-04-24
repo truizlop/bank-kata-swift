@@ -41,6 +41,14 @@ class AccountTest : QuickSpec {
                 
                 statement.verifyLineAddedWithTransaction(expectedTransaction, withBalance: 500);
             }
+            
+            it("should save a transaction for a withdrawal"){
+                account.withdraw(300, onDate: "02/01/2003")
+                
+                let expectedTransaction = Transaction(withAmount: -300, onDate: "02/01/2003")
+                
+                statement.verifyLineAddedWithTransaction(expectedTransaction, withBalance: -300)
+            }
         }
     }
 }

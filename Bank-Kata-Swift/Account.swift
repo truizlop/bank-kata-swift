@@ -20,7 +20,7 @@ class Account {
     }
     
     func withdraw(amount : Double, onDate date : String){
-        
+        statement.addLineWithTransaction(Transaction(withAmount: -amount, onDate: date), withBalance: -amount)
     }
     
     func printStatementTo(printer : Printer){
