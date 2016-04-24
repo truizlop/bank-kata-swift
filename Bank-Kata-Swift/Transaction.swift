@@ -16,6 +16,10 @@ class Transaction {
         self.amount = amount
         self.date = date
     }
+    
+    func printTo(printer : Printer, withBalance balance : Double){
+        printer.println("\(date) | \(amount) | - | \(balance)")
+    }
 }
 
 extension Transaction : Equatable{}

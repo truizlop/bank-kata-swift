@@ -11,18 +11,6 @@ import Nimble
 
 class DefaultStatementTest : QuickSpec {
     
-    class MockPrinter : Printer {
-        var lines : [String] = []
-        
-        func println(line : String){
-            lines.append(line)
-        }
-        
-        func verifyPrintedLinesInOrder(lines : String...){
-            expect(self.lines) == lines
-        }
-    }
-    
     override func spec(){
         describe("DefaultStatement"){
             var statement : DefaultStatement!
@@ -37,6 +25,18 @@ class DefaultStatementTest : QuickSpec {
                 statement.printTo(printer)
                 
                 printer.verifyPrintedLinesInOrder("date | deposit | withdrawal | balance")
+            }
+            
+            it("should print onle line per transaction in statement in reverse chronological order"){
+                statement.addLineWithTransaction(Transaction(withAmount: 500, onDate: "01/01/2001"), withBalance: 500)
+                statement.addLineWithTransaction(Transaction(withAmount: -300, onDate: "02/01/2001"), withBalance: 200)
+                statement.printTo(printer)
+                
+                printer.verifyPrintedLinesInOrder(
+                    "date | deposit | withdrawal | balance",
+                    "02/01/2001 | - | 300.00 | 200.00",
+                    "01/01/2001 | 500.00 | - | 500.00"
+                )
             }
         }
     }

@@ -11,18 +11,6 @@ import Nimble
 
 class PrintStatementAcceptance : QuickSpec {
     
-    class MockPrinter : Printer {
-        var lines : [String] = []
-        
-        func println(line : String){
-            lines.append(line)
-        }
-        
-        func verifyLinesInOrder(lines : String...){
-            expect(self.lines) == lines
-        }
-    }
-    
     override func spec() {
         describe("Print a statement"){
             let account = Account(withStatement : DefaultStatement())
@@ -35,7 +23,7 @@ class PrintStatementAcceptance : QuickSpec {
                 
                 account.printStatementTo(printer)
                 
-                printer.verifyLinesInOrder(
+                printer.verifyPrintedLinesInOrder(
                     "date | deposit | withdrawal | balance",
                     "24/04/2016 | 500.00 | - | 1200.00",
                     "23/04/2016 | - | 300.00 | 700.00",

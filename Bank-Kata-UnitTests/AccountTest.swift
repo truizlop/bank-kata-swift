@@ -33,10 +33,6 @@ class AccountTest : QuickSpec {
         }
     }
     
-    class MockPrinter : Printer {
-        func println(line: String) {}
-    }
-    
     override func spec(){
         describe("Account"){
             var account : Account!
