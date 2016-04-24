@@ -10,17 +10,24 @@ import Foundation
 
 class Account {
     let statement : Statement
+    var balance : Double = 0
     
     init(withStatement statement : Statement){
         self.statement = statement
     }
     
     func deposit(amount : Double, onDate date : String){
-        statement.addLineWithTransaction(Transaction(withAmount: amount, onDate: date), withBalance: amount)
+        saveTransaction(amount, onDate: date)
     }
     
     func withdraw(amount : Double, onDate date : String){
-        statement.addLineWithTransaction(Transaction(withAmount: -amount, onDate: date), withBalance: -amount)
+        saveTransaction(-amount, onDate: date)
+    }
+    
+    private func saveTransaction(amount : Double, onDate date : String){
+        let newBalance = balance + amount
+        statement.addLineWithTransaction(Transaction(withAmount: amount, onDate: date), withBalance: newBalance)
+        balance = newBalance
     }
     
     func printStatementTo(printer : Printer){

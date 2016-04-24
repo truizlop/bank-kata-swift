@@ -49,6 +49,18 @@ class AccountTest : QuickSpec {
                 
                 statement.verifyLineAddedWithTransaction(expectedTransaction, withBalance: -300)
             }
+            
+            it("should update balance properly on several transactions"){
+                
+                account.deposit(500, onDate: "01/02/2003")
+                account.withdraw(300, onDate: "02/03/2003")
+                
+                let expectedDeposit = Transaction(withAmount: 500, onDate: "01/02/2003")
+                let expectedWithdrawal = Transaction(withAmount: -300, onDate: "02/03/2003")
+                
+                statement.verifyLineAddedWithTransaction(expectedDeposit, withBalance: 500)
+                statement.verifyLineAddedWithTransaction(expectedWithdrawal, withBalance: 200)
+            }
         }
     }
 }
