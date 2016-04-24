@@ -18,7 +18,11 @@ class Transaction {
     }
     
     func printTo(printer : Printer, withBalance balance : Double){
-        printer.println("\(date) | \(amount) | - | \(balance)")
+        printer.println("\(date) | \(formatAmount(amount)) | - | \(formatAmount(balance))")
+    }
+    
+    private func formatAmount(amount : Double) -> String{
+        return String(format:"%.2f", amount)
     }
 }
 
