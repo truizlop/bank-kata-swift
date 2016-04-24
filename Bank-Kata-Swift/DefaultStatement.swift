@@ -10,12 +10,18 @@ import Foundation
 
 class DefaultStatement : Statement {
     private let STATEMENT_HEADER = "date | deposit | withdrawal | balance"
+    private var lines : [StatementLine] = []
     
     func addLineWithTransaction(transaction : Transaction, withBalance balance : Double){
         
+        lines.append(StatementLine(withTransaction: transaction, withBalance: balance))
     }
     
     func printTo(printer: Printer) {
         printer.println(STATEMENT_HEADER)
+        
+        lines.reverse().forEach{
+            $0.printTo(printer)
+        }
     }
 }
