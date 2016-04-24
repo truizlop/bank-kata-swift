@@ -25,7 +25,7 @@ class PrintStatementAcceptance : QuickSpec {
     
     override func spec() {
         describe("Print a statement"){
-            let account = Account()
+            let account = Account(withStatement : DefaultStatement())
             let printer = MockPrinter()
             
             it("should print the account transactions in reverse chronological order"){

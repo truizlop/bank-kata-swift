@@ -13,6 +13,15 @@
 		11040FA71CCCDBED00D3A9DF /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11040FA51CCCDBE000D3A9DF /* Account.swift */; };
 		11040FA91CCCDC3400D3A9DF /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11040FA81CCCDC3400D3A9DF /* Printer.swift */; };
 		11040FAA1CCCDC6500D3A9DF /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11040FA81CCCDC3400D3A9DF /* Printer.swift */; };
+		11040FAC1CCCE01000D3A9DF /* AccountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11040FAB1CCCE01000D3A9DF /* AccountTest.swift */; };
+		11040FAE1CCCE12D00D3A9DF /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11040FAD1CCCE12D00D3A9DF /* Statement.swift */; };
+		11040FAF1CCCE15500D3A9DF /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11040FAD1CCCE12D00D3A9DF /* Statement.swift */; };
+		11040FB11CCCE24000D3A9DF /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11040FB01CCCE24000D3A9DF /* Transaction.swift */; };
+		11040FB21CCCE27000D3A9DF /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11040FB01CCCE24000D3A9DF /* Transaction.swift */; };
+		11040FB81CCCE5BB00D3A9DF /* ContainsTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11040FB71CCCE5BB00D3A9DF /* ContainsTuple.swift */; };
+		11040FBA1CCCE73A00D3A9DF /* DefaultStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11040FB91CCCE73A00D3A9DF /* DefaultStatement.swift */; };
+		11040FBB1CCCE79A00D3A9DF /* DefaultStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11040FB91CCCE73A00D3A9DF /* DefaultStatement.swift */; };
+		11CA52BB1CCCEED6006DB6AD /* TransactionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CA52BA1CCCEED6006DB6AD /* TransactionTest.swift */; };
 		E58B904BAC846E82D1702B65 /* Pods_Bank_Kata_UnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBACA0D92D3390F5C320874 /* Pods_Bank_Kata_UnitTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +47,12 @@
 		11040FA31CCCDAF200D3A9DF /* PrintStatementAcceptance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintStatementAcceptance.swift; sourceTree = "<group>"; };
 		11040FA51CCCDBE000D3A9DF /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		11040FA81CCCDC3400D3A9DF /* Printer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
+		11040FAB1CCCE01000D3A9DF /* AccountTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTest.swift; sourceTree = "<group>"; };
+		11040FAD1CCCE12D00D3A9DF /* Statement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
+		11040FB01CCCE24000D3A9DF /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		11040FB71CCCE5BB00D3A9DF /* ContainsTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainsTuple.swift; sourceTree = "<group>"; };
+		11040FB91CCCE73A00D3A9DF /* DefaultStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultStatement.swift; sourceTree = "<group>"; };
+		11CA52BA1CCCEED6006DB6AD /* TransactionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTest.swift; sourceTree = "<group>"; };
 		5CBACA0D92D3390F5C320874 /* Pods_Bank_Kata_UnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bank_Kata_UnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86DA91358542D80681E22532 /* Pods-Bank-Kata-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bank-Kata-UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bank-Kata-UnitTests/Pods-Bank-Kata-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EBF9DADA70BFC98B0E01D32D /* Pods-Bank-Kata-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bank-Kata-UnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bank-Kata-UnitTests/Pods-Bank-Kata-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +104,9 @@
 				11040F8C1CCCD99C00D3A9DF /* main.swift */,
 				11040FA51CCCDBE000D3A9DF /* Account.swift */,
 				11040FA81CCCDC3400D3A9DF /* Printer.swift */,
+				11040FAD1CCCE12D00D3A9DF /* Statement.swift */,
+				11040FB01CCCE24000D3A9DF /* Transaction.swift */,
+				11040FB91CCCE73A00D3A9DF /* DefaultStatement.swift */,
 			);
 			path = "Bank-Kata-Swift";
 			sourceTree = "<group>";
@@ -96,6 +114,7 @@
 		11040F981CCCD9AB00D3A9DF /* Bank-Kata-UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				11040FB61CCCE5A500D3A9DF /* Matchers */,
 				11040FA11CCCDABE00D3A9DF /* Unit */,
 				11040FA01CCCDAB500D3A9DF /* Acceptance */,
 				11040F9B1CCCD9AB00D3A9DF /* Info.plist */,
@@ -115,8 +134,18 @@
 		11040FA11CCCDABE00D3A9DF /* Unit */ = {
 			isa = PBXGroup;
 			children = (
+				11040FAB1CCCE01000D3A9DF /* AccountTest.swift */,
+				11CA52BA1CCCEED6006DB6AD /* TransactionTest.swift */,
 			);
 			name = Unit;
+			sourceTree = "<group>";
+		};
+		11040FB61CCCE5A500D3A9DF /* Matchers */ = {
+			isa = PBXGroup;
+			children = (
+				11040FB71CCCE5BB00D3A9DF /* ContainsTuple.swift */,
+			);
+			name = Matchers;
 			sourceTree = "<group>";
 		};
 		6AFF15613E30ADC48406CE83 /* Pods */ = {
@@ -277,7 +306,10 @@
 			files = (
 				11040FA91CCCDC3400D3A9DF /* Printer.swift in Sources */,
 				11040F8D1CCCD99C00D3A9DF /* main.swift in Sources */,
+				11040FBA1CCCE73A00D3A9DF /* DefaultStatement.swift in Sources */,
 				11040FA61CCCDBE000D3A9DF /* Account.swift in Sources */,
+				11040FAE1CCCE12D00D3A9DF /* Statement.swift in Sources */,
+				11040FB11CCCE24000D3A9DF /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,8 +318,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				11040FAA1CCCDC6500D3A9DF /* Printer.swift in Sources */,
+				11040FAC1CCCE01000D3A9DF /* AccountTest.swift in Sources */,
+				11040FBB1CCCE79A00D3A9DF /* DefaultStatement.swift in Sources */,
+				11CA52BB1CCCEED6006DB6AD /* TransactionTest.swift in Sources */,
+				11040FB21CCCE27000D3A9DF /* Transaction.swift in Sources */,
 				11040FA41CCCDAF200D3A9DF /* PrintStatementAcceptance.swift in Sources */,
 				11040FA71CCCDBED00D3A9DF /* Account.swift in Sources */,
+				11040FAF1CCCE15500D3A9DF /* Statement.swift in Sources */,
+				11040FB81CCCE5BB00D3A9DF /* ContainsTuple.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

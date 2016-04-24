@@ -9,8 +9,14 @@
 import Foundation
 
 class Account {
+    let statement : Statement
+    
+    init(withStatement statement : Statement){
+        self.statement = statement
+    }
+    
     func deposit(amount : Double, onDate date : String){
-        
+        statement.addLineWithTransaction(Transaction(withAmount: amount, onDate: date), withBalance: amount)
     }
     
     func withdraw(amount : Double, onDate date : String){
