@@ -9,11 +9,13 @@
 import Foundation
 
 class DefaultStatement : Statement {
+    private let STATEMENT_HEADER = "date | deposit | withdrawal | balance"
+    
     func addLineWithTransaction(transaction : Transaction, withBalance balance : Double){
         
     }
     
     func printTo(printer: Printer) {
-        
+        printer.println(STATEMENT_HEADER)
     }
 }
